@@ -27,7 +27,26 @@ class Node():
             to_visit.extend(current.children)
     
 
+    def bfs(self, data):
+        """Return node object with the given data."""
+
+        to_visit = [self]
+
+        while to_visit:
+            current = to_visit.pop(0)
+
+            if current.data == data:
+                return current
+        
+        to_visit.extend(current.children)
+
+
     def recursive_dfs(self, data):
+        """Search for Node object with given data, recursively."""
+
+        pass
+    
+    def recursive_bfs(self, data):
         """Search for Node object with given data, recursively."""
 
         pass

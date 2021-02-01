@@ -36,13 +36,19 @@ def reverse_list(lst):
         return [lst[-1]] + reverse_list(lst[:(len(lst) - 1)])
 
 def recursive_fibb(n):
-    """Find the nth number in the Fibbonaci sequence."""
+    """Find the nth number in the Fibbonaci sequence.
+    
+    >>> recursive_fibb(3)
+    1
+    >>> recursive_fibb(5)
+    3
+    """
 
-    if n == 0:
+    if n == 1:
         return 0
     
-    if n == 1:
+    if n == 2:
         return 1
     
     else:
-        return (n - 1) + (n - 2)
+        return recursive_fibb(n - 1) + recursive_fibb(n - 2)

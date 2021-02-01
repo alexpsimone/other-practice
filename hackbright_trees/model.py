@@ -50,3 +50,24 @@ class Node():
         """Search for Node object with given data, recursively."""
 
         pass
+
+
+# Tree Class
+class Tree():
+    """A tree object."""
+
+    def __init__(self, root):
+        self.root = root
+    
+    def __repr__(self):
+        return f'<Tree root={self.root}>'
+    
+    def dfs_tree(self, data):
+        """Return node object with the given data."""
+
+        return self.root.dfs(data)
+    
+    def bfs_tree(self, data):
+        """Return node object with the given data."""
+
+        return self.root.bfs(data)

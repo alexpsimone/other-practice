@@ -38,7 +38,7 @@ class Node():
             if current.data == data:
                 return current
         
-        to_visit.extend(current.children)
+            to_visit.extend(current.children)
 
 
     def recursive_dfs(self, data):
@@ -71,3 +71,34 @@ class Tree():
         """Return node object with the given data."""
 
         return self.root.bfs(data)
+
+
+# Binary Tree Node Class
+class BinarySearchNode():
+    """A node in a binary tree."""
+
+    def __init__(self, data, left=None, right=None):
+
+        self.data = data
+        self.left = left
+        self.right = right
+    
+    def __repr__(self):
+
+        return f'<BinaryNode {self.data}>'
+    
+    def binary_Search(self, sought):
+
+        current = self
+
+        while current:
+
+            if current.data == sought:
+                return current
+            
+            elif sought < current.data:
+                current = current.left
+            
+            elif sought > current.data:
+                current = current.right
+    

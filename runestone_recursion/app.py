@@ -34,3 +34,15 @@ def reverse_list(lst):
     
     else:
         return [lst[-1]] + reverse_list(lst[:(len(lst) - 1)])
+
+def recursive_fibb(n):
+    """Find the nth number in the Fibbonaci sequence."""
+
+    if n == 0:
+        return 0
+    
+    if n == 1:
+        return 1
+    
+    else:
+        return (n - 1) + (n - 2)

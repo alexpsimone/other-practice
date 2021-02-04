@@ -23,7 +23,7 @@ def find_highest_sum(root):
 
 
 if __name__ == '__main__':
-    t = tree(2)
+    t = tree(4)
     print(t)
 
     make_some_negative(t)
